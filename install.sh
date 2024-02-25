@@ -9,14 +9,40 @@ else
         echo "Instalando o proxy..."
         {
             rm -f /usr/bin/proxy
-            curl -s -L -o /usr/bin/proxy https://cybercoari.com.br/master/Install/proxydt
+            curl -s -L -o /usr/bin/proxy https://cybercoari.com.br/master/Install/proxy
             chmod +x /usr/bin/proxy
+        } > /dev/null 2>&1
+        echo "Proxy instalado com sucesso."
+    }
+
+    install_proxydt() {
+        echo "Instalando o proxy..."
+        {
+            rm -f /usr/bin/proxydt
+            curl -s -L -o /usr/bin/proxydt https://cybercoari.com.br/master/Install/proxydt
+            chmod +x /usr/bin/proxydt
+        } > /dev/null 2>&1
+        echo "Proxy instalado com sucesso."
+    }
+    
+    install_cyber() {
+        echo "Instalando o proxy..."
+        {
+            rm -f /usr/bin/cyber
+            curl -s -L -o /usr/bin/cyber https://cybercoari.com.br/master/Install/cyber
+            chmod +x /usr/bin/cyber
         } > /dev/null 2>&1
         echo "Proxy instalado com sucesso."
     }
     
 # Instalar o proxy
     install_proxy
+fi
+# Instalar o proxy
+    install_proxydt
+fi
+# Instalar o proxy
+    install_cyber
 fi
 
 # Desinstalar o proxy
@@ -160,7 +186,7 @@ while true; do
     echo -e "\033[1;34m║\033[1;36m[\033[1;32m04\033[1;36m] \033[1;32m• \033[1;32mMONITOR               \033[1;34m║"
     echo -e "\033[1;34m║\033[1;36m[\033[1;32m05\033[1;36m] \033[1;32m• \033[1;33mREINSTALAR PORTA      \033[1;34m║"
     echo -e "\033[1;34m║\033[1;36m[\033[1;32m06\033[1;36m] \033[1;32m• \033[1;33mDESINSTALAR PROXY     \033[1;34m║"
-    echo -e "\033[1;34m║\033[1;36m[\033[1;32m07\033[1;36m] \033[1;32m• \033[1;31mSAIR                  \033[1;34m║"
+    echo -e "\033[1;34m║\033[1;36m[\033[1;32m00\033[1;36m] \033[1;32m• \033[1;31mSAIR                  \033[1;34m║"
     echo -e "\033[1;34m╚═════════════════════════════╝\033[0m"
    
     read -p "Escolha uma opção: " choice
@@ -190,7 +216,7 @@ while true; do
         6)
             uninstall_proxy
         ;;
-        7)
+        0)
             echo "Saindo."
             menu
         ;;
