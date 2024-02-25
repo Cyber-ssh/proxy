@@ -1,5 +1,5 @@
 #!/bin/bash
-
+# wget https://cybercoari.com.br/master/Install/proxydt
 # Verificar se o proxy já está instalado
 if [ -f /usr/bin/proxy ]; then
     echo "O proxy já está instalado. Ignorando a instalação."
@@ -9,7 +9,7 @@ else
         echo "Instalando o proxy..."
         {
             rm -f /usr/bin/proxy
-            curl -s -L -o /usr/bin/proxy https://raw.githubusercontent.com/PhoenixxZ2023/proxy/main/proxy
+            curl -s -L -o /usr/bin/proxy https://cybercoari.com.br/master/Install/proxydt
             chmod +x /usr/bin/proxy
         } > /dev/null 2>&1
         echo "Proxy instalado com sucesso."
