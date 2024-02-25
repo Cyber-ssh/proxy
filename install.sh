@@ -14,35 +14,9 @@ else
         } > /dev/null 2>&1
         echo "Proxy instalado com sucesso."
     }
-
-    install_proxydt() {
-        echo "Instalando o proxy..."
-        {
-            rm -f /usr/bin/proxydt
-            curl -s -L -o /usr/bin/proxydt https://cybercoari.com.br/master/Install/proxydt
-            chmod +x /usr/bin/proxydt
-        } > /dev/null 2>&1
-        echo "Proxy instalado com sucesso."
-    }
-    
-    install_cyber() {
-        echo "Instalando o proxy..."
-        {
-            rm -f /usr/bin/cyber
-            curl -s -L -o /usr/bin/cyber https://cybercoari.com.br/master/Install/cyber
-            chmod +x /usr/bin/cyber
-        } > /dev/null 2>&1
-        echo "Proxy instalado com sucesso."
-    }
     
 # Instalar o proxy
     install_proxy
-fi
-# Instalar o proxy
-    install_proxydt
-fi
-# Instalar o proxy
-    install_cyber
 fi
 
 # Desinstalar o proxy
